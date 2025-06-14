@@ -5,8 +5,18 @@ float peso, altura, indice;
 int main() {
 	printf("Ingrese su peso corporal:\n");
 	scanf("%f", &peso);
-	printf("Ingrese su altura:\n");
+	while(peso < 0){
+		printf("ERROR: El pesaje debe ser positivo\n");
+		printf("Ingrese su peso corporal:\n");
+		scanf("%f", &peso);
+	}
+	printf("Ingrese su altura en Metros:\n");
 	scanf("%f", &altura);
+	while(altura < 0){
+		printf("ERROR: La altura debe ser positiva\n");
+		printf("Ingrese su altura en Metros:\n");
+		scanf("%f", &altura);
+	}
 	
 	indice = (peso / (altura * altura));
 	
